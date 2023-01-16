@@ -120,3 +120,49 @@
 	align-items: center;
 	flex-direction: row;
   }
+  .card-img {
+	a{
+		display: none;
+		cursor: pointer;
+		&:hover, &:focus{
+			box-shadow: 0px 2px 5px #e0d6d6;
+			color: black;
+		}
+	}
+	p{
+		display: block;
+		/* border: 1px solid #e7d9d9; */
+		width: fit-content;
+		height: 20%;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		/* align-content: center; */
+		align-items: center;
+		justify-content: center;
+		margin: 5px;
+		left: 23%;
+		}
+    &:hover, &:focus {
+        		p{
+					// color: black;
+					display: none
+				}
+				a{
+					display: block;
+					border: 1px solid #e7d9d9;
+					width: 50%;
+					height: 20%;
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					align-content: center;
+					align-items: center;
+					justify-content: center;
+					margin: 5px;
+					left: 23%;
+				}
+         	}
+}
