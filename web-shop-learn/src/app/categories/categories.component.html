@@ -8,12 +8,25 @@
                 <p class="intro-paragraph ">Knobs</p>
             </div>
         </section>
-        <section class="panel">
+        <section class="panel ">
             <div class="product-type">
                 <img src="../../assets/images/handles/handles-img13.jpg" alt="image" />
                 <p class="intro-paragraph ">Handles</p>
             </div>
         </section>
+        <section class="d none">
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </section>
+     
     </div>
     <div class="col-md-9">
 
@@ -24,82 +37,25 @@
                         <div class="col-md-12 carousel-sec-con">
                             <div id="myCarousel" class="carousel slide carousel-data-con" data-ride="carousel"
                                 data-interval="0">
-                                <!-- Carousel indicators -->
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
                                 </ol>
-                                <!-- Wrapper for carousel items -->
-                                <div class="carousel-inner">
-                                    <div class="item carousel-item active">
+                                <div class="carousel-inner"  >
+                                    <div class="item carousel-item" [ngClass]="{'active': i==0}" *ngFor="let catKnobs of catKnobsArray; let i= index">
                                         <div class="row carousel-item-data">
-                                            <div class="card-product">
+                                            <div class="card-product" (click)="openCategoriespanel()" *ngFor="let Knobs of catKnobs">
                                                 <div class="thumb-wrapper">
                                                     <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
                                                     <div class="thumb-content">
-                                                        <img src="../../assets/images/knobs/knob-img1.jpg"
+                                                        <img src="{{Knobs}}"
                                                             class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/knobs/knobs-img14.jpg"
-                                                        class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/knobs/knobs-img12.jpg"
-                                                        class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item carousel-item">
-                                        <div class="row carousel-item-data">
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/knobs/knob-img1.jpg"
-                                                            class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/knobs/knobs-img14.jpg"
-                                                        class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/knobs/knobs-img12.jpg"
-                                                        class="" alt="slider-image" />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Carousel controls -->
                                 <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
                                     <i class="fa fa-angle-left"></i>
                                 </a>
@@ -129,68 +85,15 @@
                                     <!-- <li data-target="#myCarouselhandles" data-slide-to="2"></li> -->
                                 </ol>
                                 <!-- Wrapper for carousel items -->
-                                <div class="carousel-inner">
-                                    <div class="item carousel-item active">
+                                <div class="carousel-inner"  >
+                                    <div class="item carousel-item" [ngClass]="{'active': i==0}" *ngFor="let cathandles of catHandlesArray; let i= index">
                                         <div class="row carousel-item-data">
-                                            <div class="card-product">
+                                            <div class="card-product" (click)="openCategoriespanel()" *ngFor="let handles of cathandles">
                                                 <div class="thumb-wrapper">
                                                     <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
                                                     <div class="thumb-content">
-                                                        <img src="../../assets/images/handles/handles-img1.jpg"
+                                                        <img src="{{handles}}"
                                                             class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/handles/handles-img2.jpg"
-                                                        class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/handles/handles-img3.jpg"
-                                                        class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item carousel-item">
-                                        <div class="row carousel-item-data">
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/handles/handles-imgS4.jpg"
-                                                            class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/handles/handles-img5.jpg"
-                                                        class="" alt="slider-image" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-product">
-                                                <div class="thumb-wrapper">
-                                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-
-                                                    <div class="thumb-content">
-                                                        <img src="../../assets/images/handles/handles-imgS6.jpg"
-                                                        class="" alt="slider-image" />
                                                     </div>
                                                 </div>
                                             </div>

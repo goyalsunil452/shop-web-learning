@@ -322,7 +322,7 @@ img{
     margin-right: -4px;
   }		
   .carousel-indicators {
-    bottom: -50px;
+    bottom: -20px;
   }
   .carousel-indicators li, .carousel-indicators li.active {
     width: 10px;
@@ -371,7 +371,8 @@ img{
   }
   .card-product{
     width: 50%;
-    flex: .5
+    flex: .5;
+    cursor: pointer;
   }
 
 

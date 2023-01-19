@@ -1,0 +1,51 @@
+<div class="container bootdey">
+    <img src="../../assets/logos/logo_transparent.png" class="img-backgd logo-img" alt="slider-image" />
+    <h2>Featured <b>Products</b></h2>
+
+    <div class="main-container-cat-panel">
+        <div class="left-container-panel">
+            <h4>Categories</h4>
+            <div>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Knobs
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>further categoris</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+            <div>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Handles
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>further categoris</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </div>
+        <div class="right-container-panel">
+
+            <div class="row product-list">
+                <div class="main-container-cat ">
+                    <div class="container-xl product-page">
+                        <div class="loop-items"  *ngFor="let Knobs of catKnobsArray">
+                            <div class="img-product-ind-section">
+                                <div class="card-img-product">
+                                    <img src="{{Knobs}}"
+                                        class="img-product-ind" alt="slider-image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

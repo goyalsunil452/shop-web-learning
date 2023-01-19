@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MaterialModule } from 'src/material.module';
+import { CategoryOneComponent } from './category-one/category-one.component';
 
 
 const routes: Routes = [
@@ -23,7 +26,7 @@ const routes: Routes = [
 @NgModule({
   exports: [RouterModule],
   declarations: [
-    CategoriesComponent],
+    CategoriesComponent,CategoryOneComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot([
@@ -38,8 +41,20 @@ const routes: Routes = [
     //     path: 'child-a', // child route path
     //     component: CategoriesComponent, // child route component that the router renders
     //   }, ]
-    }]),
+    },
+    { path: 'Categories-panel', 
+    component: CategoryOneComponent,
+    // children: [
+    //   {
+    //     path: 'child-a', // child route path
+    //     component: CategoriesComponent, // child route component that the router renders
+    //   }, ]
+    }
+  ]),
+  
     IvyCarouselModule,
+    // MatExpansionModule
+    MaterialModule
 
 
   ],
