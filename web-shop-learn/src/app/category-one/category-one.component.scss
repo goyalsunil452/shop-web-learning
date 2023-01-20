@@ -493,6 +493,7 @@ h2::after {
 h4 {
   text-transform: none;
   padding: 0 24px;
+  font-weight: 600;
 }
 .card-img{
   border-style: solid;
@@ -516,4 +517,13 @@ h4 {
     height: auto;
     position: relative;
     display: block;
+}
+.title-class{
+  font-size: 13Spx;
+  font-weight: 500;
+}
+.mat-acc-div{
+  border: 1px solid #dbe0e5;
+  border-radius: 8px;
+  margin: 15px;
 }
